@@ -11,8 +11,7 @@
 
 @implementation TodoList
 - (id)initWithTodoItems:(NSArray *)todoItems {
-    self = [super init];
-    if (self) {
+    if ((self = [super init])) {
         _todoItems = [[NSMutableArray alloc] init];
         for (int i = 0; i < [todoItems count]; i++) {
             [self addItem:todoItems[i]];
@@ -22,8 +21,7 @@
 }
 
 - (id)initWithTodoItem:(NSString *)todoItem {
-    self = [super init];
-    if (self) {
+    if ((self = [super init])) {
         _todoItems = [[NSMutableArray alloc] init];
         [self addItem:todoItem];
     }
@@ -37,21 +35,39 @@
                       
 - (void)showIncompleteTodoItems {
     NSLog(@"====TODOS====");
+    NSMutableArray *results = [[NSMutableArray alloc] init];
     for (int i = 0; i < [self.todoItems count]; i++) {
         TodoItem *todoItem = self.todoItems[i];
         if (!todoItem.complete) {
-            NSLog(@"%d) %@", i+1, todoItem.title);
+            [results addObject:todoItem];
         }
     }
+    
+    for (int i = 0; i < [results count]; i++) {
+        TodoItem *todoItem = results[i];
+        NSLog(@"%d) %@", i+1, todoItem.title);
+    }
+    
+    [self logTodoItemResultsArray:results];
 }
 
 - (void)showCompletedTodoItems {
     NSLog(@"====TODOS COMPLETED====");
+    NSMutableArray *results = [[NSMutableArray alloc] init];
     for (int i = 0; i < [self.todoItems count]; i++) {
         TodoItem *todoItem = self.todoItems[i];
         if (todoItem.complete) {
-            NSLog(@"%d) %@", i+1, todoItem.title);
+            [results addObject:todoItem];
         }
+    }
+    
+    [self logTodoItemResultsArray:results];
+}
+
+- (void)logTodoItemResultsArray:(NSMutableArray *)results {
+    for (int i = 0; i < [results count]; i++) {
+        TodoItem *todoItem = results[i];
+        NSLog(@"%d) %@", i+1, todoItem.title);
     }
 }
 

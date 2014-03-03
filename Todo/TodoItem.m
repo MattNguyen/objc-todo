@@ -11,8 +11,7 @@
 @implementation TodoItem
 
 - (id)initWithTitle:(NSString *)title {
-    self = [super init];
-    if (self) {
+    if ((self = [super init])) {
         _title = [title copy];
     }
     NSLog(@"Created task: %@", self.title);

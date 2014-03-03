@@ -7,15 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TodoItem.h"
+#import "TodoList.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        
-        // insert code here...
-        NSLog(@"Hello, World!");
-        
+        NSArray *newTodoItems = @[@"do shit", @"do more shit", @"still more shit to do"];
+        TodoList *myTodoList = [[TodoList alloc] initWithTodoItems:newTodoItems];
+        [myTodoList showIncompleteTodoItems];
+        [myTodoList markComplete:1];
+        [myTodoList showIncompleteTodoItems];
+        [myTodoList showCompletedTodoItems];
     }
     return 0;
 }

@@ -10,6 +10,8 @@
 		FD9298CC18C470E000E42DEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9298CB18C470E000E42DEC /* Foundation.framework */; };
 		FD9298CF18C470E000E42DEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9298CE18C470E000E42DEC /* main.m */; };
 		FD9298D318C470E000E42DEC /* Todo.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FD9298D218C470E000E42DEC /* Todo.1 */; };
+		FD9298DB18C4710200E42DEC /* TodoList.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9298DA18C4710200E42DEC /* TodoList.m */; };
+		FD9298DE18C4711400E42DEC /* TodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9298DD18C4711400E42DEC /* TodoItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,10 @@
 		FD9298CE18C470E000E42DEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD9298D118C470E000E42DEC /* Todo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Todo-Prefix.pch"; sourceTree = "<group>"; };
 		FD9298D218C470E000E42DEC /* Todo.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Todo.1; sourceTree = "<group>"; };
+		FD9298D918C4710200E42DEC /* TodoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoList.h; sourceTree = "<group>"; };
+		FD9298DA18C4710200E42DEC /* TodoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoList.m; sourceTree = "<group>"; };
+		FD9298DC18C4711400E42DEC /* TodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoItem.h; sourceTree = "<group>"; };
+		FD9298DD18C4711400E42DEC /* TodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				FD9298CE18C470E000E42DEC /* main.m */,
+				FD9298D918C4710200E42DEC /* TodoList.h */,
+				FD9298DA18C4710200E42DEC /* TodoList.m */,
+				FD9298DC18C4711400E42DEC /* TodoItem.h */,
+				FD9298DD18C4711400E42DEC /* TodoItem.m */,
 				FD9298D218C470E000E42DEC /* Todo.1 */,
 				FD9298D018C470E000E42DEC /* Supporting Files */,
 			);
@@ -140,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD9298CF18C470E000E42DEC /* main.m in Sources */,
+				FD9298DE18C4711400E42DEC /* TodoItem.m in Sources */,
+				FD9298DB18C4710200E42DEC /* TodoList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
